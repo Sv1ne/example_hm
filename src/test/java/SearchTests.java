@@ -10,7 +10,6 @@ public class SearchTests {
 
     @Test
     void successfulSearchTest() {
-        holdBrowserOpen = false;
         browser = "edge";
         open("https://www.google.com/");
         $("#W0wltc").click();
