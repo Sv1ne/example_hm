@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -16,5 +17,10 @@ public class SearchTests {
         $("#W0wltc").click();
         $("[name=q]").setValue("selenide").pressEnter();
         $("#search").shouldHave(text("https://selenide.org"));
+    }
+
+    @Test
+    void textIntuptest() {
+        Assertions.assertTrue(10>1);
     }
 }
