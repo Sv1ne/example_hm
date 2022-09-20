@@ -11,8 +11,7 @@ public class SearchTests {
 
     @Test
     void successfulSearchTest() {
-        holdBrowserOpen = true;
-        browser = "opera";
+        holdBrowserOpen = false;
         open("https://www.google.com/");
         $("#W0wltc").click();
         $("[name=q]").setValue("selenide").pressEnter();
