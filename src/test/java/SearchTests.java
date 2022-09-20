@@ -10,7 +10,8 @@ public class SearchTests {
 
     @Test
     void successfulSearchTest() {
-        browser = "opera";
+        holdBrowserOpen = true;
+        browser = "edge";
         open("https://www.google.com/");
         $("#W0wltc").click();
         $("[name=q]").setValue("selenide").pressEnter();
