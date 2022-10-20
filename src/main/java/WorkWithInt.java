@@ -5,11 +5,22 @@ public class WorkWithInt {
         System.out.println(a);
         System.out.println(b);
 
-        System.out.println(a+b);
 
+        int c = 30;
+        int f = 20;
 
+        if (c > f){
+            System.out.println("C Больше");
+        }else{
+            System.out.println("равно");
+        }
+        if (f < c) {
+            System.out.println("F Больше");
 
+        }
+
+    }
 
 
     }
-}
+
