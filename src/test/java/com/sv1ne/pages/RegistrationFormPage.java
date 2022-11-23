@@ -1,6 +1,7 @@
 package com.sv1ne.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.github.javafaker.Faker;
 import com.sv1ne.components.CalendarComponent;
 import com.sv1ne.components.FileUploadComponent;
 import com.sv1ne.components.ResultModal;
@@ -17,14 +18,14 @@ public class RegistrationFormPage {
     FileUploadComponent fileUploadComponent = new FileUploadComponent();
     ResultModal resultModal = new ResultModal();
 
-    SelenideElement
+    private final SelenideElement
             firstnameElement = $("#firstName"),
             lastnameElement = $("#lastName"),
             emailElement = $("#userEmail"),
             genderElement = $("#genterWrapper"),
             userNumberElement = $("#userNumber");
 
-    private String name;
+    private String firstName;
     private String userNumber;
     private String gender;
     private String lastName;
@@ -52,8 +53,8 @@ public class RegistrationFormPage {
         return hobbies;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -100,7 +101,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setFirstName(String value) {
-        this.name = value;
+        this.firstName = value;
         firstnameElement.setValue(value);
         return this;
     }
